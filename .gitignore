@@ -6,16 +6,12 @@
 *.lo
 *.o
 *.obj
+*.ko
+*.elf
 
 # Precompiled Headers
 *.gch
 *.pch
-
-# Linker files
-*.ilk
-
-# Debugger Files
-*.pdb
 
 # Compiled Dynamic libraries
 *.so
@@ -36,6 +32,33 @@
 *.exe
 *.out
 *.app
+*.i*86
+*.x86_64
+*.hex
+*.ihex
+*.bin
 
-# debug information files
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+*.map
 *.dwo
+
+# Kernel Module Compile Results
+*.mod*
+*.cmd
+.tmp_versions/
+modules.order
+Module.symvers
+Mkfile.old
+dkms.conf
+
+# dot files
+.DS_Store
+.vscode/
+
+# build directories
+build/
+dist/
