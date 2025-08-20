@@ -61,19 +61,19 @@ trustsfml:
 
 # Build rules
 $(TARGET): $(OBJS)
-	@echo "$(BLUE)[LINK]$(RESET) $@"
+	@echo "$(BLUE)[LINK]$(RESET)    $@"
 	@mkdir -p $(dir $@)  # Ensure the directory exists
 	@$(CXX) $(LDFLAGS) $(LDLIBS) $^ -o $@
 
 # Compile source files to object files
 $(BUILD_DIR)/%.o: $(SRC_DIR)/%.cpp
-	@echo "$(GREEN)[CXX]$(RESET) $<"
+	@echo "$(GREEN)[CXX]$(RESET)     $<"
 	@mkdir -p $(dir $@)  # Ensure the directory exists
 	@$(CXX) $(CXXSTD) $(CXXFLAGS) -DASSETS_PATH=\"$(CURDIR)/assets\" -c $< -o $@
 
 # Clean up build artifacts
 clean:
-	@echo "$(YELLOW)[CLEAN]$(RESET) $@"
+	@echo "$(YELLOW)[CLEAN]$(RESET)   $@"
 	@rm -rf $(BUILD_DIR)
 
 # PHONY commands
